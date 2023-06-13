@@ -73,26 +73,76 @@ main {
   margin-bottom: 24px;
   background-color: #f7f7f7;
 }
-.card h3{
-    font-size: 22px;
-    margin-bottom: 10px;
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
-.card h4{
-    font-size: 18px;
-    color: salmon;
-    margin-bottom: 10px;
+.card h4 {
+  font-size: 18px;
+  color: salmon;
+  margin-bottom: 10px;
 }
-.card:nth-child(even) h4{
-    color: #16d3b7;
+.card:nth-child(even) h4 {
+  color: #16d3b7;
 }
 .card .timeline {
-    font-size: 16px;
-    color: gray;
+  font-size: 16px;
+  color: gray;
 }
-.card .timeline span:first-child{
-    border-right: 1px solid gray;
-    padding-right: 10px;
-    margin-right: 10px;
+.card .timeline span:first-child {
+  border-right: 1px solid gray;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 40px 0px;
+  background: linear-gradient(
+    45deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 176, 45, 1) 100%
+  );
+  padding: 40px 24px;
+  border-radius: 8px;
+}
+.contact-form .form-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact-form .form-item label {
+  display: block;
+  font-size: 16px;
+}
+.contact-form .form-item input,
+.contact-form .form-item textarea {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+.contact-form .form-item input:focus,
+.contact-form .form-item textarea:focus{
+  border: 1px solid darkcyan;
+}
+.contact-form .form-actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+.contact-form .form-actions button{
+  width: 80%;
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 4px 4px 4px darkcyan;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 /* table and above */
 @media (min-width: 640px) {

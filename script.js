@@ -1,4 +1,6 @@
 const info = {
+  logo: "Utkarsh Gupta",
+  pageTitle: "Utkarsh Gupta | Front End Engineer | Portfolio",
   title: "Hi! I'm Utkarsh Gupta",
   subHeading:
     "I'm a 24-year-old software engineer specializing in TypeScript, React, and Web Performance.",
@@ -31,12 +33,19 @@ const info = {
 };
 
 (function () {
+  initLogo();
   addPageHeading();
   addPageSubHeading();
   addDesignation();
-  addExpeirences()
+  addExpeirences();
+  handleForm();
 })();
 
+function initLogo() {
+  document.title = info.pageTitle;
+  const logo = document.getElementById("header-logo");
+  logo.innerHTML = info.logo;
+}
 function addPageHeading() {
   const h1 = document.createElement("h1");
 
@@ -95,10 +104,48 @@ function createCard(cardInfo) {
   dateContainer.append(from);
   dateContainer.append(to);
 
-  card.classList.add('card')
-  dateContainer.classList.add('timeline')
+  card.classList.add("card");
+  dateContainer.classList.add("timeline");
   card.append(heading);
   card.append(subHeading);
   card.append(dateContainer);
   return card;
 }
+
+function handleForm() {
+  const form = document.querySelector("#contact form");
+  const formBtn = document.getElementById("form-submit-btn");
+  const data = {};
+  form.addEventListener("input", (event) => {
+    onChangeInput(event, data);
+  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // stops the default submit behaviour of form i.e reloading
+    onSubmit(data);
+  });
+  formBtn.onclick = function(event){
+    //evenet handler
+    // this function will call on btn click
+    
+  }
+}
+function resetForm(data) {
+  const form = document.querySelector("#contact form");
+  for (let key in data) {
+    data[key] = "";
+  }
+  form.reset(); // reset values of all input under this form
+}
+function onChangeInput(event, data) {
+  const name = event.target.name;
+  const value = event.target.value;
+  data[name] = value;
+}
+
+function onSubmit(data) {
+  console.log(data);
+  // Task: do the validation on this form
+  resetForm(data);
+}
+
+

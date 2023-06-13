@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utkarsh Gupta</title>
+    <title>Portfolio</title>
     <link rel="icon" type="image/png" href="fav.png" />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <h2>
-        <a href="#"> Utkarsh Gupta </a>
+        <a href="#" id="header-logo"> Hello </a>
       </h2>
     </header>
     <main>
@@ -24,14 +24,46 @@
       </div>
 
       <div id="expirences" class="detail-section">
-        <h2 class="detail-section-heading">
-          Expirences
-        </h2>
-        <div id="expirences-list" class="details-children">
-
+        <h2 class="detail-section-heading">Expirences</h2>
+        <div id="expirences-list" class="details-children"></div>
+      </div>
+      <div id="contact" class="detail-section">
+        <h2 class="detail-section-heading">Contact Me</h2>
+        <div class="contact-form">
+          <form>
+            <div class="form-item">
+              <label for="username"> Name </label>
+              <input
+                id="username"
+                name="username"
+                placeholder="Enter your name..."
+              />
+            </div>
+            <div class="form-item">
+              <label for="number"> Phone Number </label>
+              <input
+                id="number"
+                name="number"
+                type="tel"
+                placeholder="Enter your phone number..."
+              />
+            </div>
+            <div class="form-item">
+              <label for="msg"> Message </label>
+              <textarea
+                rows="5"
+                name="msg"
+                placeholder="Enter your message here..."
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button id="form-submit-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </main>
+    
     <script src="./script.js"></script>
   </body>
 </html>
